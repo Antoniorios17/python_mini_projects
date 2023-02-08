@@ -3,16 +3,24 @@ name_of_unit = "hours"
 
 
 def days_to_units(num_of_days):
+    return f"{num_of_days} days are {num_of_days * calculation_of_units} {name_of_unit}"
     
-    if num_of_days > 0:
-        return f"{num_of_days} days are {num_of_days * calculation_of_units} {name_of_unit}"
-    elif num_of_days == 0:
-        return "0 is not a valid number\nPlease enter a valid positive number"
-    else:
-        return "You enter a negative value\nNo conversion for you"
 
+def validate_and_execute():
+    try:
+        user_input_number = int(num_of_days_element)
+        if user_input_number>0:
+            calculated_value = days_to_units(user_input_number)
+            print(calculated_value)
+        elif user_input_number == 0 :
+            print("You entered a 0, please enter a valid positive number")
+        else:
+            print("You entered a negative number , please enter a valid positive number")
+    except ValueError:
+        print("Your input is not a valid number")
 
-user_input=input("Hello \n\nEnter a number of days\nI wil convert it to hours\n--> ")
-
-calculated_value = days_to_units(int(user_input))
-print(calculated_value)
+user_input=""
+while user_input != "exit": 
+    user_input=input("Hello \n\nEnter a number of days\nI wil convert it to hours\n--> ")
+    for num_of_days_element in user_input.split():
+        validate_and_execute()
