@@ -22,5 +22,11 @@ def validate_and_execute():
 user_input=""
 while user_input != "exit": 
     user_input=input("Hello \n\nEnter a number of days\nI wil convert it to hours\n--> ")
-    for num_of_days_element in user_input.split():
+    for num_of_days_element in set(user_input.split(",")):
         validate_and_execute()
+
+
+
+
+
+
