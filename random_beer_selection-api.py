@@ -2,10 +2,15 @@ import json
 import requests
 from random import randint
 
+#This scrypt will allow the user to type down a food item and the program will return a drink a goes well with it
+#The input from the user can only be a string
+
+
 food_choice = input('Please enter your dinner choice: ')
 
 
 url = f'https://api.punkapi.com/v2/beers?food={food_choice}'
+
 
 r = requests.get(url)
 
