@@ -14,6 +14,8 @@ url = f'https://api.punkapi.com/v2/beers?food={food_choice}'
 # r is the new rariable containing the contents of the API
 r = requests.get(url)
 
+#json.loads will transform the json formatted data from the API into a dictionary
+#The data will be then ready to be used for analyzing
 data = json.loads(r.text)
 
 beer_list = []
