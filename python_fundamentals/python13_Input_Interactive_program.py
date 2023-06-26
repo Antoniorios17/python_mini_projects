@@ -1,4 +1,4 @@
-# updated hello world program
+# updated hello world program using input()
 
 my_name = input("please enter your name: ")
 my_age = input("Please enter your age: ")
