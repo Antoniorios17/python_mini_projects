@@ -38,4 +38,11 @@ def print_member_age(**age):
         print("Name = %s, Age = %s" %(i,j))
 
 
+#The double asterisk ** makes it work like a dictionary
+# to call the function we write
+
+print_member_age(Peter = 5, John = 7)
+# We'll get:
+# Name = Peter, Age = 5
+# Name = John, Age = 7
 
