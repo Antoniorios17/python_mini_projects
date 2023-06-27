@@ -1,0 +1,20 @@
+This is th
+e first li
+ne
+This is
+ the secon
+d line
+Pyt
+hon for Be
+ginners
+He
+llo World
+
+google.com
+
+This sent
+ence will 
+be appende
+d
+Python i
+s fun
