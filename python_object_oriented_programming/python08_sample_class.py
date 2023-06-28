@@ -15,7 +15,7 @@ class staff:
         hourly_rate = input(prompt)
         self.pay = int(hours)*int(hourly_rate)
         return self.pay
-    
+
     @property
     def position(self):
         print('Getter Method')
@@ -28,6 +28,11 @@ class staff:
         else:
             print('Position is invalid. No changes made.')
 
+# this section was added as part of python09_Special_methods.py
+    def __add__(self,other):
+        return self.pay + other.pay
+
+# this section was added as part of python08_child_class.py
 class management_staff(staff):
     def __init__(self, p_name, p_pay, p_allowance, p_bonus):
         super().__init__('Manager', p_name, p_pay)
@@ -51,5 +56,6 @@ class basic_staff(staff):
     def __init__(self, p_name, p_pay):
         super().__init__('Basic', p_name, p_pay)
         
+
 
     
