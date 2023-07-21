@@ -10,5 +10,4 @@ m = hashlib.md5()
 
 m.update(bsecret_message)
 
-
 print(m.digest())
