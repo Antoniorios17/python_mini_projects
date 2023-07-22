@@ -20,6 +20,8 @@ def validate_and_execute():
     except ValueError:
         print("Your input is not a valid number")
 
+# Enter the input it can only be an integer value
+
 user_input=""
 while user_input != "exit": 
     user_input=input("Hello \n\nEnter a number of days\nI wil convert it to hours\n--> ")
