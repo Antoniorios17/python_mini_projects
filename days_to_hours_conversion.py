@@ -1,10 +1,11 @@
 calculation_of_units = 24
 name_of_unit = "hours"
 
-
+#Define the function for conversion:
 def days_to_units(num_of_days):
     return f"{num_of_days} days are {num_of_days * calculation_of_units} {name_of_unit}"
     
+#Validate the value entered by the user
 
 def validate_and_execute():
     try:
