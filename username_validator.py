@@ -9,4 +9,8 @@ def hint_username(username):
     else:
         print("Valid Username")
 
+hint_username("mike")
+hint_username("22")
+hint_username("Thisismyusername")
+
 
