@@ -1,6 +1,8 @@
 # This program validates usernames
+# username needs to be at least 3 characters
 
 def hint_username(username):
+    
     if len(username) < 3 :
         print("Invalid username. Must be at least 3 charaters long")
     
