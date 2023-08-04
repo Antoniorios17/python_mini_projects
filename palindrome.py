@@ -10,3 +10,4 @@ def is_palindrome(input):
 print(is_palindrome("aa"))
 print(is_palindrome("abc"))
 print(is_palindrome("kayak"))
+print(is_palindrome("aaa"))
