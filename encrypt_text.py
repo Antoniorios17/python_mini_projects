@@ -7,11 +7,10 @@ print("=================================\n\n")
 
 
 def encryptor(message):
-    new_message = message.encode()
     #creates a hash object
-    m= hashlib.md5()
-    encryption = m.update(new_message)
-    return encryption
+    encryption = hashlib.md5(message.encode())
+    new_message = print(f"The String \"{message}\" is equal to the hash {encryption}")
+    return new_message
 
 
 
