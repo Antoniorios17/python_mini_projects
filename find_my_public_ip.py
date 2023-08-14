@@ -1,14 +1,16 @@
 from requests import get
 
+#This program will find your current public IP address
 
-
-#find your public ip
 def find_ip():
     ip = get('https://api.ipify.org').content.decode('utf8')
     public_ip = 'Your public IP address is: {}'.format(ip)
     return public_ip
 
 while True:
+    print("=========================")
+    print("Welcome to the IP Finder")
+    print("=========================\n\n")
     user_input= input("Do you want to get your public IP: (yes/no) ")
     if user_input.split()[0].lower() == "y":
         print(find_ip())
@@ -23,3 +25,4 @@ while True:
     else:
         print("Thank you, Good bye! ")
         break
+
