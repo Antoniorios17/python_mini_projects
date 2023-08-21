@@ -10,5 +10,5 @@ data = response.json()
 list = 1
 print(f"The list of available pokemons is :\n")
 for pokemon in data['results']:
-    print(f"{list}. {pokemon['name']}")
+    print(f"{list}. {pokemon['name'].upper()}")
     list+=1
