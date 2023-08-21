@@ -8,6 +8,7 @@ response = requests.get(url)
 data = response.json()
 
 list = 1
+print(f"The list of available pokemons is :\n")
 for pokemon in data['results']:
-    print(list, pokemon['name'])
+    print(f"{list}. {pokemon['name']}")
     list+=1
