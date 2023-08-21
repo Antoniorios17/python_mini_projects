@@ -7,8 +7,6 @@ response = requests.get(url)
 
 data = response.json()
 
-# print(data.keys())
-print(data['results'][0])
 list = 1
 for pokemon in data['results']:
     print(list, pokemon['name'])
