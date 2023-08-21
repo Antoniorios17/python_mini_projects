@@ -9,5 +9,7 @@ data = response.json()
 
 # print(data.keys())
 print(data['results'][0])
+list = 1
 for pokemon in data['results']:
-    print(pokemon)
+    print(list, pokemon['name'])
+    list+=1
