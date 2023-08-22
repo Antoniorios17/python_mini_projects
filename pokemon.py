@@ -13,3 +13,4 @@ for pokemon in data['results']:
     print(f"{list}. {pokemon['name'].upper()}")
     list+=1
     
+
