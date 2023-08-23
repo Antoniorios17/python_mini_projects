@@ -8,7 +8,7 @@ response = requests.get(url)
 data = response.json()
 
 list = 1
-print(f"The list of available pokemons is :\n")
+print(f"The list of available pokemons is in this API is :\n")
 for pokemon in data['results']:
     print(f"{list}. {pokemon['name'].upper()}")
     list+=1
