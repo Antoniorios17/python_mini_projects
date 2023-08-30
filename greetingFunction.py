@@ -3,3 +3,5 @@ def greeting(input):
     return output
 
 print(greeting("antonio"))
+
+user_input = input("Please enter your name: ")
