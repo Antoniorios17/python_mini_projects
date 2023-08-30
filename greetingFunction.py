@@ -7,7 +7,7 @@ def greeting(input):
 print("Welcome to the greeting program:\n ")
 
 while True:
-    user_input = input('''Please enter your name or type exit to leave: \nOr type exit to leave: \n''')
+    user_input = input('''Please enter your name \nOr type exit to leave: \n''')
     if user_input == "exit":
         break
     else:
