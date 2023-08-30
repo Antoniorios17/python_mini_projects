@@ -1,6 +1,7 @@
 def greeting(input):
-    input = input.capitalize()
-    output = f'Hello {input}!'
+    global name
+    name = input.capitalize()
+    output = f'Hello {name}!'
     return output
 
 # print(greeting("antonio"))
@@ -13,7 +14,7 @@ while True:
         break
     else:
         print(greeting(user_input))
-        response = input("Would you like to continue? ")
+        response = input("Would you like to continue {} ? ".format(name))
         if response[0].lower() == "y":
             continue
         else:
