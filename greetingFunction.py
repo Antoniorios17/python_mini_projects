@@ -4,8 +4,6 @@ def greeting(input):
     output = f'Hello {name}!'
     return output
 
-# print(greeting("antonio"))
-
 print("Welcome to the greeting program:\n ")
 
 while True:
