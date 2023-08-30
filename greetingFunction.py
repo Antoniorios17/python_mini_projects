@@ -1,4 +1,5 @@
 def greeting(input):
+    input = input.capitalize()
     output = f'Hello {input}!'
     return output
 
