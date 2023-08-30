@@ -1,8 +1,8 @@
-print("welcome to fruit selector")
+print("welcome to The Fruit Selector! ")
 
 entry = input("Select the first letter of your fruit: ")
 
-fruits = ["apple", "orange", "pineapple"]
+fruits = ["apple", "orange", "pineapple", "kiwi"]
 
 def fruit_select(entry):
     for fruit in fruits:
