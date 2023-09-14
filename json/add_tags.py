@@ -29,7 +29,7 @@ def add_tags(instance_id, tag_key, tag_value):
 
     # using subprocess to run aws cli command
     try:
-        aws_commands = f"aws ec2 create-tags --resources {instance_id} --tags Key={tag_key}, Value={tag_value}"
+        aws_commands = f"aws ec2 create-tags --resources {instance_id} --tags Key={tag_key},Value={tag_value}"
         subprocess.run(aws_commands, shell= True, check=True)
         print("subprocess ran successfully")
     except subprocess.CalledProcessError as e:
