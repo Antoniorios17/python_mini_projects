@@ -116,6 +116,7 @@ data = json.loads(givenJSON)
 # 2: The instance ID's where state is running
 # 3: The instance ID's tagged with env stg, get the ip address of stg instance
 
+# 1: The total number of instance ID's in input_json
 def instance_counter(data):
     number_of_instances = 0
     list_of_instances = []
@@ -128,7 +129,7 @@ def instance_counter(data):
 print(instance_counter(data))
 
 
-
+# 2: The instance ID's where state is running
 def instance_ids(data):
     instances_ids = []
     for entry in data["Reservations"]:
@@ -139,7 +140,7 @@ def instance_ids(data):
 print(instance_ids(data))
 
 
-
+# 3: The instance ID's tagged with env stg, get the ip address of stg instance
 def instance_env_stg(data):
     instance_ids = []
     for entry in data["Reservations"]:
@@ -148,7 +149,7 @@ def instance_env_stg(data):
                 if tags["Key"] == "environment" and tags["Value"] == 'stg':
                     instance_ids.append(instance["InstanceId"])
     return instance_ids
-print(instance_env_stg(data))                  
+print(instance_env_stg(data))      
 
 
 
