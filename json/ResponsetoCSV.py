@@ -1,5 +1,6 @@
 import json
 import csv
+import os
 
 response = """
 {
@@ -263,7 +264,7 @@ response = """
 }
 """
 
-data = json.loads(response)
+response = json.loads(response)
 
 # print(data["tests"])
 
@@ -272,14 +273,13 @@ data = json.loads(response)
 
 # columns 'Test Name', "Id Number, Type, Status, numOfLocations, Locations, Creator, Tags, Details
 
-total_synthetic_tests = print(len(data["tests"]))
+total_synthetic_tests = len(response["tests"])
 
 def make_csv():
-    fieldnames = ['Test Name', 'ID Number', 'Type', 'Status', 'numOfLocations', 'Locations',
-                   'Creator', 'Tags', 'Details' ]
+    fieldnames = ['Test Name', 'ID Number', 'Type', 'Status', 'numOfLocations', 'Locations','Creator', 'Tags', 'Details' ]
     rows = []
-    for i in range(total_synthetic_tests):
 
+    for i in range(0,total_synthetic_tests):
         rows.append({'Test Name':response['tests'][i]['name'], 
             'ID Number':response['tests'][i]['monitor_id'], 
             'Type':response['tests'][i]['type'],
