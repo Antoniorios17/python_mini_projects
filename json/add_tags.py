@@ -26,12 +26,14 @@ python3 add_tags.py <instanceId> <tagKey> <tagValue>
 instance_id = "i-07c39ce1b58fd42fb"
 
 def add_tags(instance_id, tag_key, tag_value):
-    
 
-
-
-
-
+    # using subprocess to run aws cli command
+    try:
+        aws_commands = f"aws ec2 create-tags --resources {instance_id} --tags Key={tag_key}, Value={tag_value}"
+        subprocess.run(aws_commands, shell= True, check=True)
+        print("subprocess ran successfully")
+    except subprocess.CalledProcessError as e:
+        print(f"Error message: {str(e)}")
 
 def main():
     # Checking for number of arguments
@@ -45,13 +47,6 @@ def main():
     tag_value = sys.argv[3]
 
     # call add_tags function
-
     add_tags(instance_id, tag_key, tag_value)
-
-
-
-
-
-
 
 main()
