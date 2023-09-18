@@ -14,3 +14,4 @@ for pokemon in data['results']:
     list+=1
     
 
+# other list of pokemons
