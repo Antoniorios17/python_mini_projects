@@ -126,7 +126,7 @@ def instance_counter(data):
     number_of_instances = len(list_of_instances)
     return f" The number of Instances is {number_of_instances}"
 
-print(instance_counter(data))
+# print(instance_counter(data))
 
 
 # 2: The instance ID's where state is running
@@ -137,7 +137,7 @@ def instance_ids(data):
             if instance["State"]["Name"] == "running":
                 instances_ids.append(instance["InstanceId"])
     return instances_ids
-print(instance_ids(data))
+# print(instance_ids(data))
 
 
 # 3: The instance ID's tagged with env stg, get the ip address of stg instance
@@ -147,9 +147,12 @@ def instance_env_stg(data):
         for instance in entry["Instances"]:
             for tags in instance["Tags"]:
                 if tags["Key"] == "environment" and tags["Value"] == 'stg':
-                    instance_ids.append(instance["InstanceId"])
+                    instance_ids.append([instance["InstanceId"], instance['PublicIpAddress']])
+                    # print([instance["InstanceId"], instance['PublicIpAddress']])
     return instance_ids
 print(instance_env_stg(data))      
+
+
 
 
 
