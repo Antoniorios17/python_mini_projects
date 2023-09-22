@@ -2,7 +2,7 @@ print("welcome to The Fruit Selector! ")
 
 entry = input("Select the first letter of your fruit: ")
 
-fruits = ["apple", "orange", "pineapple", "kiwi", "Blueberry", "cherry", 'watermelon']
+fruits = ["apple", "orange", "pineapple", "kiwi", "Blueberry", "cherry", 'watermelon', 'banana']
 
 def fruit_select(entry):
     for fruit in fruits:
