@@ -15,12 +15,15 @@ pokemon_name = "doduo"
 
 pokemon_info = get_pokemon_info(pokemon_name)
 
-if pokemon_info:
-    print(f"Name: {pokemon_info['name'].capitalize()}")
-    print(f"Id: {pokemon_info['id']}")
-    print(f"Height: {pokemon_info['height']} ft")
-    weight_kg = pokemon_info["weight"]*0.45
-    print(f"Weight: {pokemon_info['weight']} lb and {weight_kg} kg")
+# if pokemon_info:
+#     print(f"Name: {pokemon_info['name'].capitalize()}")
+#     print(f"Id: {pokemon_info['id']}")
+#     print(f"Height: {pokemon_info['height']} ft")
+#     weight_kg = pokemon_info["weight"]*0.45
+#     print(f"Weight: {pokemon_info['weight']} lb and {weight_kg} kg")
 
-
-
+def get_pokemon_id():
+    id = pokemon_info['id']
+    return f'Id: {id}'
+print(pokemon_name, get_pokemon_id())
+    
